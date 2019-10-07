@@ -7,11 +7,9 @@ class SignInUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
 
-      padding: EdgeInsets.all(30.0),
+      padding: EdgeInsets.only(top: 30, right:15, bottom: 10, left: 15),
       child: Stack(
-
         alignment: AlignmentDirectional.center,
-
         children: <Widget>[
           Container(
             height: 250,
@@ -36,12 +34,9 @@ class SignInUp extends StatelessWidget {
             ),
           ),
           Positioned(
-
-
-            bottom: -290,
-
+            bottom: -320,
             child: Container(
-              height: 350,
+              height: 380,
               width: 270,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
@@ -57,7 +52,7 @@ class SignInUp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.all(20),
+                    padding: EdgeInsets.only(top:20, left: 15),
                     child: Row(
                       children: <Widget>[
                         Text("Login ", style: TextStyle(fontWeight: FontWeight.w500,),),
@@ -66,25 +61,8 @@ class SignInUp extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(20),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text("EMAIL", style: TextStyle(),),
-                        Container(
-                          height: 33,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              border: Border.all(
-                                color: Colors.grey,
-                                width: 1.0,
-                              )
-                          ),
-                        )
-
-                      ],
-                    ),
+                    padding: EdgeInsets.all(3),
+                    child: SignIn(),
                   ),
                 ],
               ),
@@ -96,6 +74,84 @@ class SignInUp extends StatelessWidget {
       ),
 
     );
-
   }
 }
+
+class SignIn extends StatefulWidget {
+  @override
+  _SignInState createState() => _SignInState();
+}
+
+class _SignInState extends State<SignIn> {
+
+  String _email = '';
+  String _nombre = '';
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+
+      padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+      child: Column(
+        children: <Widget>[
+          _crearEmail(),
+          Divider(),
+          _crearPassword(),
+          Divider(),
+        ],
+      )
+
+    );
+  }
+  Widget _crearEmail() {
+
+    return TextField(
+      keyboardType: TextInputType.emailAddress,
+      decoration: InputDecoration(
+
+        hintText: 'Email',
+        suffixIcon: Icon( Icons.email, color: Colors.green, ),
+        //suffixIcon: Icon( Icons.alternate_email ),
+        hoverColor: Colors.black12,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+      ),
+      onChanged: (valor) {
+
+        setState(() {
+          _email = valor;
+        });
+
+
+      },
+    );
+
+  }
+
+  Widget _crearPassword() {
+    return TextField(
+      //autofocus: true,
+      obscureText: true,
+      decoration: InputDecoration(
+        hintText: 'Password',
+        labelText: 'Password',
+        suffixIcon: Icon( Icons.lock_open, color: Colors.blue, ),
+        
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+      ),
+      onChanged: (valor) {
+
+        setState(() {
+          _nombre = valor;
+        });
+
+
+      },
+    );
+  }
+
+}
+
