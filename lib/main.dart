@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gpm_tracking_v2/pages/inicio.dart';
+import 'package:gpm_tracking_v2/pages/login_registro.dart';
 import 'package:gpm_tracking_v2/pages/sign_in_up.dart';
 
 void main() => runApp(MyApp());
@@ -24,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
   final _layoutPage = [
-    SignInUp(),
+    RegistroLogin(),
     Inicio(),
   ];
 

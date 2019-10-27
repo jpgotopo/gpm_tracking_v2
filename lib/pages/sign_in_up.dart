@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gpm_tracking_v2/pages/login.dart';
 
 void main() => runApp(SignInUp());
 
@@ -106,15 +107,17 @@ class _SignInState extends State<SignIn> {
   Widget _crearEmail() {
 
     return TextField(
+      
       keyboardType: TextInputType.emailAddress,
+      autofocus: true,
       decoration: InputDecoration(
 
         hintText: 'Email',
-        suffixIcon: Icon( Icons.email, color: Colors.green, ),
+        suffixIcon: Icon( Icons.email, color: Colors.green),
         //suffixIcon: Icon( Icons.alternate_email ),
         hoverColor: Colors.black12,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(12.0),
         ),
       ),
       onChanged: (valor) {
@@ -131,7 +134,7 @@ class _SignInState extends State<SignIn> {
 
   Widget _crearPassword() {
     return TextField(
-      //autofocus: true,
+      
       obscureText: true,
       decoration: InputDecoration(
         hintText: 'Password',
@@ -139,7 +142,7 @@ class _SignInState extends State<SignIn> {
         suffixIcon: Icon( Icons.lock_open, color: Colors.blue, ),
         
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(12.0),
         ),
       ),
       onChanged: (valor) {
