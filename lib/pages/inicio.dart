@@ -153,7 +153,7 @@ class MenuPrincipalItems extends StatelessWidget {
       children: <Widget>[
         Container(
           width: 50.0,
-          height: 50.0,
+          height: 48.0,
           decoration: BoxDecoration(
             color: colorBox,
             shape: BoxShape.circle,
@@ -168,7 +168,7 @@ class MenuPrincipalItems extends StatelessWidget {
           child: Text(
             title,
             style: TextStyle(
-              fontSize: 12.0,
+              fontSize: 10.0,
             ),
             textAlign: TextAlign.center,
           ),
@@ -182,7 +182,7 @@ class MenuSecundario extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20.0),
+      padding: EdgeInsets.symmetric(vertical: 10.0),
 
       child: Column(
         children: <Widget>[
@@ -200,7 +200,7 @@ class MenuSecundario extends StatelessWidget {
                     children: <Widget>[
                       Container(
                         height: 50.0,
-                        width: 50.0,
+                        width: 45.0,
                         decoration: BoxDecoration(
                           color: Colors.amber,
                           shape: BoxShape.circle,
@@ -229,7 +229,7 @@ class MenuSecundario extends StatelessWidget {
                     children: <Widget>[
                       Container(
                         height: 50.0,
-                        width: 50.0,
+                        width: 45.0,
                         decoration: BoxDecoration(
                           color: Colors.red,
                           shape: BoxShape.circle,
@@ -237,7 +237,7 @@ class MenuSecundario extends StatelessWidget {
 
                         ),
                       ),
-                      Icon(Icons.map, color: Colors.white, size: 32.0,),
+                      Icon(Icons.map, color: Colors.white, size: 28.0,),
 
                     ],
                   ),

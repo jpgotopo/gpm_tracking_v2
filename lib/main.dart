@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gpm_tracking_v2/pages/inicio.dart';
 import 'package:gpm_tracking_v2/pages/login_registro.dart';
+import 'package:gpm_tracking_v2/pages/profile.dart';
 import 'package:gpm_tracking_v2/pages/sign_in_up.dart';
 
 void main() => runApp(MyApp());
@@ -27,6 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final _layoutPage = [
     RegistroLogin(),
     Inicio(),
+    Perfil(),
   ];
 
   void _onTabItem(int index){
