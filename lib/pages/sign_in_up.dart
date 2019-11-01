@@ -6,39 +6,52 @@ void main() => runApp(SignInUp());
 class SignInUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final data = MediaQuery.of(context); 
     return Container(
 
       padding: EdgeInsets.only(top: 30, right:15, bottom: 10, left: 15),
       child: Stack(
-        alignment: AlignmentDirectional.center,
+        alignment: AlignmentDirectional.bottomCenter,
         children: <Widget>[
-          Container(
-            height: 250,
-            decoration: BoxDecoration(
-              borderRadius: new BorderRadius.only(
-                topLeft: const Radius.circular(27),
-                topRight: const Radius.circular(27),
-                bottomLeft: const Radius.circular(59),
-                bottomRight: const Radius.circular(59),
+          Column(
+            children: <Widget>[
+              Container(
+                height: data.size.height*0.4,
+                decoration: BoxDecoration(
+                  borderRadius: new BorderRadius.only(
+                    topLeft: const Radius.circular(27),
+                    topRight: const Radius.circular(27),
+                    bottomLeft: const Radius.circular(59),
+                    bottomRight: const Radius.circular(59),
 
+                  ),
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: <Color>[
+                      Color(0xFF65B04B),
+                      Color(0xFF409422),
+                      Color(0xFF409422),
+                      Color(0xFF65B04B),
+                    ],
+                  ),
+                ),
               ),
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: <Color>[
-                  Color(0xFF65B04B),
-                  Color(0xFF409422),
-                  Color(0xFF409422),
-                  Color(0xFF65B04B),
-                ],
+            Container(
+              height: data.size.height*0.4,
+              decoration: BoxDecoration(
+                color: Colors.white,
               ),
-            ),
+
+            )
+            ],
+            
           ),
           Positioned(
-            bottom: -320,
+            
             child: Container(
-              height: 380,
-              width: 270,
+              height: data.size.height*0.55,
+              width: data.size.width*0.75,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   color: Colors.white,
@@ -50,10 +63,10 @@ class SignInUp extends StatelessWidget {
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.only(top:20, left: 15),
+                    padding: EdgeInsets.only(top: 15, left: 15),
                     child: Row(
                       children: <Widget>[
                         Text("Login ", style: TextStyle(fontWeight: FontWeight.w500,),),
@@ -75,6 +88,7 @@ class SignInUp extends StatelessWidget {
       ),
 
     );
+    
   }
 }
 

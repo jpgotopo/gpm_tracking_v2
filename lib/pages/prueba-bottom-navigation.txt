@@ -1,0 +1,161 @@
+@override
+Widget build(BuildContext context) {
+  return new Scaffold(
+    appBar: new AppBar(
+      title: new Text('App Name'),
+      ),
+    body:
+      new Container(
+        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,padding: const EdgeInsets.all(2.0),
+        child:
+          new Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  new Image.asset(
+                    'images/name.jpg',
+                    width: 100.0,
+                    height: 100.0,
+                    ),
+
+                  new Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      new Text(
+                      "Text",
+                        style: new TextStyle(fontSize:12.0,
+                        color: const Color(0xFF000000),
+                        fontWeight: FontWeight.w200,
+                        fontFamily: "Roboto")
+                      ),
+
+                      new Text(
+                      "Text",
+                        style: new TextStyle(fontSize:12.0,
+                        color: const Color(0xFF000000),
+                        fontWeight: FontWeight.w200,
+                        fontFamily: "Roboto")
+                      )
+                    ]
+
+                  ),
+
+                  new Container(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.center,padding: const EdgeInsets.all(2.0),
+                  )
+                ]
+
+              ),
+
+              new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  new Icon(
+                    Icons.account_circle,
+                    color: const Color(0xFF0099ed), size: 36.0),
+
+                  new Icon(
+                    Icons.content_paste,
+                    color: const Color(0xFF0099ed), size: 36.0),
+
+                  new Icon(
+                    Icons.drafts,
+                    color: const Color(0xFF0099ed), size: 36.0),
+
+                  new Icon(
+                    Icons.import_contacts,
+                    color: const Color(0xFF0099ed), size: 36.0),
+
+                  new Icon(
+                    Icons.star_border,
+                    color: const Color(0xFF0099ed), size: 36.0)
+                ]
+
+              ),
+
+              new BottomNavigationbar(
+                new BottomNavigationBarItem(
+                  icon: const Icon(Icons.star),
+                  title: new Text('Title'),
+                )
+                new BottomNavigationBarItem(
+                  icon: const Icon(Icons.star),
+                  title: new Text('Title'),
+                )
+                new BottomNavigationBarItem(
+                  icon: const Icon(Icons.star),
+                  title: new Text('Title'),
+                )
+              ),
+
+              new BottomNavigationbar(
+                new BottomNavigationBarItem(
+                  icon: const Icon(Icons.star),
+                  title: new Text('Title'),
+                )
+                new BottomNavigationBarItem(
+                  icon: const Icon(Icons.star),
+                  title: new Text('Title'),
+                )
+              ),
+
+              new BottomNavigationbar(
+                new BottomNavigationBarItem(
+                  icon: const Icon(Icons.star),
+                  title: new Text('Title'),
+                )
+                new BottomNavigationBarItem(
+                  icon: const Icon(Icons.star),
+                  title: new Text('Title'),
+                )
+                new BottomNavigationBarItem(
+                  icon: const Icon(Icons.star),
+                  title: new Text('Title'),
+                )
+              ),
+
+              new BottomNavigationbar(
+                new BottomNavigationBarItem(
+                  icon: const Icon(Icons.star),
+                  title: new Text('Title'),
+                )
+                new BottomNavigationBarItem(
+                  icon: const Icon(Icons.star),
+                  title: new Text('Title'),
+                )
+              ),
+
+              new RaisedButton(key:null, onPressed:buttonPressed,
+                color: const Color(0xFF0099ed),
+                child:
+                  new Text(
+                  "Volver",
+                    style: new TextStyle(fontSize:13.0,
+                    color: const Color(0xFFffffff),
+                    fontWeight: FontWeight.w900,
+                    fontFamily: "Roboto")
+                  )
+                )
+            ]
+
+          ),
+
+      ),
+
+  );
+}
+void buttonPressed(){}

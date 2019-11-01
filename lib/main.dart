@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
   final _layoutPage = [
-    RegistroLogin(),
+    SignInUp(),
     Inicio(),
     Perfil(),
   ];
