@@ -27,6 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
         backgroundColor: Colors.green,
         title: Text(widget.title),
         actions: <Widget>[
@@ -36,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ],
       ),
+      drawer: MenuLateral(),
       body: ListView(
         children: <Widget>[
           Profile(),
@@ -443,6 +445,34 @@ class MenuSecundario extends StatelessWidget {
       ),
     );
   }
+}
+class MenuLateral extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) {
+    
+    return new Drawer(
+      child: ListView(
+        children: <Widget>[
+          new UserAccountsDrawerHeader(
+            accountName: Text('GPM Tracking'),
+            accountEmail: Text('gpmladp@gmail.com'),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage('https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiD6-uzz83lAhUJ2FkKHZ9NAhgQjRx6BAgBEAQ&url=https%3A%2F%2Fallevents.in%2Fcopiapo%2FJuly%3Fref%3Dnearby-cities&psig=AOvVaw03xHVR62SKtQdpwJv4eluh&ust=1572851499982845'),
+                fit: BoxFit.cover
+              )
+            ),
+          ),
+        new ListTile(
+
+        )
+        ],
+        
+      ),
+    );
+  }
+
 }
 
 /* List<MenuSecundarioItems> menuSecundario = [

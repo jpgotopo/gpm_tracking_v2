@@ -29,6 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
     SignInUp(),
     Inicio(),
     Perfil(),
+    MyHomePage()
   ];
 
   void _onTabItem(int index){

@@ -1,0 +1,45 @@
+{
+    "nombreApp" : "GPM Tracking",
+    "items" : [
+        {
+            "backcolor" : "ambar",
+            "icon"  : "lightbulb_outline",
+            "texto" : "Claridad en \nel llamado"
+        },
+        {
+            "backcolor" : "red",
+            "icon"  : "map",
+            "texto" : "Lugar del \nllamado"
+        },
+        {
+            "backcolor" : "blue",
+            "icon"  : "book",
+            "texto" : "Estudios\nTeológicos"
+        },
+        {
+            "backcolor" : "green",
+            "icon"  : "language",
+            "texto" : "Estudios\nTransculturales"
+        },
+        {
+            "backcolor" : "orange",
+            "icon"  : "transalte",
+            "texto" : "Capacitación\nIdioma"
+        },
+        {
+            "backcolor" : "ambar",
+            "icon"  : "home",
+            "texto" : "Compromiso\nIglesia"
+        },
+        {
+            "backcolor" : "red",
+            "icon"  : "book",
+            "texto" : "Manual\nVamos"
+        },
+        {
+            "backcolor" : "blue",
+            "icon"  : "assistant",
+            "texto" : "Orar, Ofrendar\nMovilizar"
+        }
+    ]
+}
