@@ -38,7 +38,7 @@ class SignInUp extends StatelessWidget {
                 ),
               ),
             Container(
-              height: data.size.height*0.4,
+              height: data.size.height*0.1,
               decoration: BoxDecoration(
                 color: Colors.white,
               ),
@@ -66,11 +66,23 @@ class SignInUp extends StatelessWidget {
                 
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.only(top: 15, left: 15),
+                    padding: EdgeInsets.only(top: 15, left: 1),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
-                        Text("Login ", style: TextStyle(fontWeight: FontWeight.w500,),),
-                        Text("Registro ", style: TextStyle(fontWeight: FontWeight.w500),),
+                        FlatButton(
+                          onPressed: (){},
+                          textColor: Colors.blue,
+                          disabledColor: Colors.grey,
+                          child:Text("Login ", style: TextStyle(fontWeight: FontWeight.w500,),),
+                        ),
+                        FlatButton(
+                          onPressed: (){},
+                          disabledColor: Colors.grey,
+                          child:Text("Registro ", style: TextStyle(fontWeight: FontWeight.w500),),
+                        ),
+
+                        
                       ],
                     ),
                   ),
@@ -112,7 +124,31 @@ class _SignInState extends State<SignIn> {
           _crearEmail(),
           Divider(),
           _crearPassword(),
-          Divider(),
+          
+          _notaLogin(),
+          SizedBox(height: 10.0,),
+          RaisedButton(
+          onPressed: () {},
+          textColor: Colors.white,
+          padding: const EdgeInsets.all(0.0),
+          child: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: <Color>[
+                  Color(0xFF127BB8),
+                  Color(0xFF3594C9),
+                  
+                ],
+              ),
+            ),
+            padding: const EdgeInsets.all(10.0),
+            child: const Text(
+              '       Entrar       ',
+              style: TextStyle(fontSize: 20)
+            ),
+          ),
+        ),
+          
         ],
       )
 
@@ -170,5 +206,40 @@ class _SignInState extends State<SignIn> {
     );
   }
 
+  
+
 }
 
+Widget _notaLogin(){
+
+  return Row(
+    children: <Widget>[
+      Checkbox(
+        value: false,
+        onChanged: (value){
+          
+        },
+      ),
+      Text('Mantenerse Logueado ', style: TextStyle(fontSize: 10.0, color: Colors.grey),),
+      SizedBox(width: 8.0,),
+      Text('Olvidé Contraseña', style: TextStyle(fontSize: 10.0, color: Colors.blueAccent),),
+    ],
+  );
+
+}
+
+class SignUp extends StatefulWidget {
+  @override
+  _SignUpState createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        _notaLogin()
+      ],
+    );
+  }
+}

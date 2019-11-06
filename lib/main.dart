@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import "package:flare_splash_screen/flare_splash_screen.dart";
 import 'package:gpm_tracking_v2/pages/inicio.dart';
 import 'package:gpm_tracking_v2/pages/login_registro.dart';
 import 'package:gpm_tracking_v2/pages/profile.dart';
 import 'package:gpm_tracking_v2/pages/sign_in_up.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -12,7 +14,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'GPM Tracking',
-      home: MyHomePage(),
+      home: SplashScreen(
+        'assets/splash.flr', 
+        MyHomePage(),
+        startAnimation: 'intro',
+        backgroundColor: Color(0xFF181818),
+      ) 
+      
     );
   }
 }
