@@ -15,9 +15,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'GPM Tracking',
       home: SplashScreen(
+        
         'assets/splash.flr', 
-        MyHomePage(),
-        startAnimation: 'intro',
+        (context) => MyHomePage(),
+        isLoading: true,
+        startAnimation: '1',
         backgroundColor: Color(0xFF181818),
       ) 
       
